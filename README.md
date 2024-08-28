@@ -11,6 +11,9 @@ Set of .dotfiles for personal or professional use.
 
 * [Zsh](https://www.zsh.org/) 5.9+
 * [Powerlevel10k](https://github.com/romkatv/powerlevel10k)
+* [Starship](https://starship.rs/)
+* [Zsh Autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)
+* [Zsh Syntax Highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
 
 #### Editor
 
