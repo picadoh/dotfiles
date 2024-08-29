@@ -30,17 +30,23 @@ Set of .dotfiles for personal or professional use.
 * [Fzf](https://github.com/junegunn/fzf)
 * [Ag](https://github.com/ggreer/the_silver_searcher)
 * [Tmux](https://github.com/tmux/tmux) and [Tmux Plugin Manager](https://github.com/tmux-plugins/tpm)
+* [Bat](https://github.com/sharkdp/bat)
+* [Delta](https://github.com/dandavison/delta)
 
 ### Setup
 
 ```shell
 git clone https://github.com/picadoh/dotfiles.git ~/dotfiles
+
 ln -s ~/dotfiles/.config/tmux ~/.config/tmux
 ln -s ~/dotfiles/.config/nvim ~/.config/nvim
-ln -s ~/dotfiles/.config/kitty ~/.config/kittym
+ln -s ~/dotfiles/.config/kitty ~/.config/kitty
 ln -s ~/dotfiles/.config/wezterm ~/.config/wezterm
 ln -s ~/dotfiles/.config/zsh ~/.config/zsh
 ln -s ~/dotfiles/.config/starship.toml ~/.config/starship.toml
-ln -s ~/dotfiles/.zshrc ~/.zshrc
+
+echo -e "source ~/.config/zsh/init.zsh" >> ~/.zshrc
+
+echo -e "[include]\n    path = ~/dotfiles/.gitconfig" >> ~/.gitconfig
 ```
 

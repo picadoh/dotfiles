@@ -17,7 +17,11 @@ alias dins='docker inspect -f'
 alias awslocal='aws --endpoint-url http://localhost:4566'
 
 # misc
-alias diff='colordiff'
 alias wget='wget -c'
 alias so='source ~/.zshrc'
+
+# delta
+if command -v delta > /dev/null; then
+  alias diff='delta'
+fi
 
