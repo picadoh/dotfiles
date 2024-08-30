@@ -28,10 +28,10 @@ Set of .dotfiles for personal or professional use.
 
 * [Git](https://git-scm.com/)
 * [Fzf](https://github.com/junegunn/fzf)
-* [Ag](https://github.com/ggreer/the_silver_searcher)
-* [Tmux](https://github.com/tmux/tmux) and [Tmux Plugin Manager](https://github.com/tmux-plugins/tpm)
-* [Bat](https://github.com/sharkdp/bat)
+* [Ripgrep](https://github.com/BurntSushi/ripgrep)
 * [Delta](https://github.com/dandavison/delta)
+* [Bat](https://github.com/sharkdp/bat) and [Catppuccin Bat](https://github.com/catppuccin/bat)
+* [Tmux](https://github.com/tmux/tmux) and [Tmux Plugin Manager](https://github.com/tmux-plugins/tpm)
 
 ### Setup
 
