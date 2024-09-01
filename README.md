@@ -31,6 +31,7 @@ Set of .dotfiles for personal or professional use.
 * [Ripgrep](https://github.com/BurntSushi/ripgrep)
 * [Delta](https://github.com/dandavison/delta)
 * [Asdf](https://asdf-vm.com/)
+* [Zoxide](https://github.com/ajeetdsouza/zoxide)
 * [Bat](https://github.com/sharkdp/bat) and [Catppuccin Bat](https://github.com/catppuccin/bat)
 * [Tmux](https://github.com/tmux/tmux) and [Tmux Plugin Manager](https://github.com/tmux-plugins/tpm)
 

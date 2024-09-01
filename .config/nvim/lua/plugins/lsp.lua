@@ -1,3 +1,26 @@
+local function lsp_servers()
+    local config = {
+        lua = "lua_ls",
+        gcc = "clangd",
+        zig = "zls",
+        python = "pylsp",
+        go = "gopls",
+        cargo = "rust_analyzer",
+        node = "tsserver",
+        bash = "bashls",
+    }
+
+    local result = {}
+
+    for key, value in pairs(config) do
+        if key == nil or vim.fn.executable(key) == 1 then
+            table.insert(result, value)
+        end
+    end
+
+    return result
+end
+
 return {
     {
         "VonHeikemen/lsp-zero.nvim",
@@ -107,16 +130,7 @@ return {
             })
 
             require("mason-lspconfig").setup({
-                ensure_installed = {
-                    "lua_ls",
-                    "clangd",
-                    "zls",
-                    "pylsp",
-                    "gopls",
-                    "rust_analyzer",
-                    "tsserver",
-                    "bashls",
-                },
+                ensure_installed = lsp_servers(),
                 handlers = {
                     -- this first function is the "default handler"
                     -- it applies to every language server without a "custom handler"
