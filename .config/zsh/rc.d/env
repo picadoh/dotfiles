@@ -8,6 +8,9 @@ export HISTIGNORE="history:uptime"
 export HISTSIZE=50000
 setopt histappend
 
+# theme
+export BAT_THEME="Catppuccin Mocha"
+
 # keys
 bindkey "^[[A" history-search-backward
 bindkey "^[[B" history-search-forward
@@ -18,17 +21,6 @@ export EDITOR='nvim'
 # fzf
 source <(fzf --zsh)
 FZF_DEFAULT_COMMAND='ag -g ""'
-
-# jenv
-if command -v jenv > /dev/null; then
-  eval "$(jenv init -)"
-fi
-
-# dotnet
-if command -v dotnet > /dev/null; then
-  export PATH="/usr/local/share/dotnet:$PATH"
-  export PATH="$HOME/.dotnet/tools:$PATH"
-fi
 
 # gpg
 export GPG_TTY="$(tty)"

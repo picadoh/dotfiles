@@ -1,0 +1,7 @@
+golang 1.23.0
+java temurin-21.0.4+7.0.LTS
+dotnet 8.0.401
+nodejs 22.7.0
+zig 0.13.0
+rust stable
+python 3.12.5

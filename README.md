@@ -30,20 +30,19 @@ Set of .dotfiles for personal or professional use.
 * [Fzf](https://github.com/junegunn/fzf)
 * [Ripgrep](https://github.com/BurntSushi/ripgrep)
 * [Delta](https://github.com/dandavison/delta)
+* [Asdf](https://asdf-vm.com/)
 * [Bat](https://github.com/sharkdp/bat) and [Catppuccin Bat](https://github.com/catppuccin/bat)
 * [Tmux](https://github.com/tmux/tmux) and [Tmux Plugin Manager](https://github.com/tmux-plugins/tpm)
 
-### Setup
+### Example setup
 
 ```shell
 git clone https://github.com/picadoh/dotfiles.git ~/dotfiles
 
 ln -s ~/dotfiles/.config/tmux ~/.config/tmux
 ln -s ~/dotfiles/.config/nvim ~/.config/nvim
-ln -s ~/dotfiles/.config/kitty ~/.config/kitty
 ln -s ~/dotfiles/.config/wezterm ~/.config/wezterm
 ln -s ~/dotfiles/.config/zsh ~/.config/zsh
-ln -s ~/dotfiles/.config/starship.toml ~/.config/starship.toml
 
 echo -e "source ~/.config/zsh/init.zsh" >> ~/.zshrc
 

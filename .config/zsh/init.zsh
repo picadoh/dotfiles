@@ -5,13 +5,9 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-# load prompt
-if command -v starship > /dev/null; then
-  eval "$(starship init zsh)"
-elif [[ -d ~/powerlevel10k ]]; then
-  source ~/powerlevel10k/powerlevel10k.zsh-theme
-  [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-fi
+# theme
+[[ ! -d $HOME/powerlevel10k ]] || source ~/powerlevel10k/powerlevel10k.zsh-theme
+[[ ! -f $HOME/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # syntax highlighting
 source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
@@ -31,4 +27,6 @@ compinit
 # rc.d files
 for f in ~/.config/zsh/rc.d/*(.N); do source "$f"; done
 
+# path
+export PATH="/usr/local/sbin:$PATH"
 

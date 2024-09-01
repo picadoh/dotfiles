@@ -113,6 +113,7 @@ return {
                     "zls",
                     "pylsp",
                     "gopls",
+                    "rust_analyzer",
                     "tsserver",
                     "bashls",
                 },
