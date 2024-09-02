@@ -18,14 +18,32 @@ ZSH_HIGHLIGHT_STYLES[path_prefix]=none
 # auto suggestions
 source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
-# auto completions
-zstyle ':completion:*' completer _complete
-zstyle ':completion:*' matcher-list '' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]}' '+l:|=* r:|=*'
+# zoxide
+if command -v zoxide > /dev/null; then
+  eval "$(zoxide init zsh)"
+  alias cd=z
+fi
+
+# asdf
+if [[ -f $HOME/.asdf/asdf.sh ]]; then
+  source "$HOME/.asdf/asdf.sh"
+  fpath=(${ASDF_DIR}/completions $fpath)
+fi
+
+if [[ -f $HOME/.asdf/plugins/java/set-java-home.zsh ]]; then
+  source $HOME/.asdf/plugins/java/set-java-home.zsh
+fi
+
+# rc.d files
+for f in ~/.config/zsh/rc.d/*.zsh(.N); do source "$f"; done
+
+# compinit
 autoload -Uz compinit
 compinit
 
-# rc.d files
-for f in ~/.config/zsh/rc.d/*(.N); do source "$f"; done
+# zstyle
+zstyle ':completion:*' completer _complete
+zstyle ':completion:*' matcher-list '' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]}' '+l:|=* r:|=*'
 
 # path
 export PATH="/usr/local/sbin:$PATH"

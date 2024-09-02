@@ -25,5 +25,3 @@ FZF_DEFAULT_COMMAND='ag -g ""'
 # gpg
 export GPG_TTY="$(tty)"
 
-# zoxide
-command -v zoxide && alias cd=z
