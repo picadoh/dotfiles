@@ -25,21 +25,18 @@ return {
     {
         "VonHeikemen/lsp-zero.nvim",
         branch = "v4.x",
-        commit = "0161aeab61d407aa1d43326a5dfc33479f4c53f6",
         lazy = true,
         config = false,
     },
 
     {
         "williamboman/mason.nvim",
-        commit = "e2f7f9044ec30067bc11800a9e266664b88cda22",
         lazy = false,
         config = true,
     },
 
     {
         "hrsh7th/nvim-cmp",
-        commit = "ae644feb7b67bf1ce4260c231d1d4300b19c6f30",
         event = "InsertEnter",
         config = function()
             local cmp = require("cmp")
@@ -81,21 +78,17 @@ return {
 
     {
         "neovim/nvim-lspconfig",
-        commit = "a89de2e049b5f89a0ee55029d5a31213bd4de6f8",
         cmd = { "LspInfo", "LspInstall", "LspStart" },
         event = { "BufReadPre", "BufNewFile" },
         dependencies = {
             {
                 "hrsh7th/cmp-nvim-lsp",
-                commit = "39e2eda76828d88b773cc27a3f61d2ad782c922d",
             },
             {
                 "williamboman/mason.nvim",
-                commit = "e2f7f9044ec30067bc11800a9e266664b88cda22",
             },
             {
                 "williamboman/mason-lspconfig.nvim",
-                commit = "1c55991321d1a861537e32446affc5de5d9a6eaf",
             },
         },
         config = function()

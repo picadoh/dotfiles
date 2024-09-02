@@ -1,7 +1,6 @@
 return {
     {
         "nvim-treesitter/nvim-treesitter",
-        commit = "ec8776ed9ef56ffe7a61e67b64d5d6b6aba2c631",
         build = function()
             require("nvim-treesitter.install").update({ with_sync = true })()
         end,

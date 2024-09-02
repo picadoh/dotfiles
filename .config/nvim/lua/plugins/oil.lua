@@ -1,6 +1,5 @@
 return {
     "stevearc/oil.nvim",
-    commit = "a632c898fbe0e363ef89b9577f1a7714ab67d682",
     config = function()
         require("oil").setup {
             view_options = {

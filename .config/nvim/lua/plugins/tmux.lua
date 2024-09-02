@@ -1,6 +1,5 @@
 return {
     "christoomey/vim-tmux-navigator",
-    commit = "5b3c701686fb4e6629c100ed32e827edf8dad01e",
     enabled = function()
         return vim.fn.executable("tmux") == 1
     end,

@@ -1,11 +1,9 @@
 return {
     {
         "vim-test/vim-test",
-        commit = "75b64f23c923d34b56e47846a026210feb57146a",
         dependencies = {
             {
                 "preservim/vimux",
-                commit = "c4ffa0b992798f3362b27642088dccb251aaef1e",
                 main = "vimux",
                 enabled = function()
                     return vim.fn.executable("tmux") == 1

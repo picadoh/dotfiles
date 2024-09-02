@@ -1,7 +1,6 @@
 return {
     {
         "lewis6991/gitsigns.nvim",
-        commit = "562dc47189ad3c8696dbf460d38603a74d544849",
         config = function()
             require("gitsigns").setup {
                 on_attach = function(bufnr)
@@ -38,7 +37,6 @@ return {
     },
     {
         "tpope/vim-fugitive",
-        commit = "0444df68cd1cdabc7453d6bd84099458327e5513",
         config = function()
             vim.keymap.set("n", "<leader>gs", vim.cmd.Git)
             vim.keymap.set("n", "<leader>gd", vim.cmd.Gvdiff)

@@ -1,7 +1,6 @@
 return {
     {
         "catppuccin/nvim",
-        commit = "18bab5ec4c782cdf7d7525dbe89c60bfa02fc195",
         priority = 1000,
         config = function()
             vim.cmd([[colorscheme catppuccin]])
