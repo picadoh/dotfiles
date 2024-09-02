@@ -5,3 +5,4 @@ nodejs 22.7.0
 zig 0.13.0
 rust stable
 python 3.12.5
+lua 5.4.7
