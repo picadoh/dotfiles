@@ -17,6 +17,7 @@ local font = {
 local config = {
     --default_prog = {"/bin/zsh", "--login", "-c", "tmux new-session -A -s main"},
     automatically_reload_config = true,
+    audible_bell = "Disabled",
     enable_tab_bar = true,
     hide_tab_bar_if_only_one_tab = true,
     window_close_confirmation = "NeverPrompt",
