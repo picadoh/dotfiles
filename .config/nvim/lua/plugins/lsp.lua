@@ -6,7 +6,7 @@ local function lsp_servers()
         python = "pylsp",
         go = "gopls",
         cargo = "rust_analyzer",
-        node = "tsserver",
+        node = "ts_ls",
         bash = "bashls",
     }
 
