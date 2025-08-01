@@ -22,7 +22,9 @@ Set of .dotfiles for personal or professional use.
 
 #### Terminal
 
-* [Kitty](https://sw.kovidgoyal.net/kitty/) or [Wezterm](https://wezfurlong.org/wezterm/index.html)
+* [Kitty](https://sw.kovidgoyal.net/kitty/)
+* [Wezterm](https://wezfurlong.org/wezterm/index.html)
+* [Ghostty](https://ghostty.org/)
 
 #### Command-line tools
 
