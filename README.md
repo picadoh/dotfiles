@@ -44,7 +44,9 @@ git clone https://github.com/picadoh/dotfiles.git ~/dotfiles
 
 ln -s ~/dotfiles/.config/tmux ~/.config/tmux
 ln -s ~/dotfiles/.config/nvim ~/.config/nvim
+ln -s ~/dotfiles/.config/kitty ~/.config/kitty
 ln -s ~/dotfiles/.config/wezterm ~/.config/wezterm
+ln -s ~/dotfiles/.config/ghostty ~/.config/ghostty
 ln -s ~/dotfiles/.config/zsh ~/.config/zsh
 
 echo -e "source ~/.config/zsh/init.zsh" >> ~/.zshrc
