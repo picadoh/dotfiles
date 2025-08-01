@@ -25,9 +25,8 @@ if command -v zoxide > /dev/null; then
 fi
 
 # asdf
-if [[ -f $HOME/.asdf/asdf.sh ]]; then
-  source "$HOME/.asdf/asdf.sh"
-  fpath=(${ASDF_DIR}/completions $fpath)
+if command -v asdf > /dev/null; then
+  export PATH="$HOME/.asdf/bin:$PATH"
 fi
 
 if [[ -f $HOME/.asdf/plugins/java/set-java-home.zsh ]]; then
