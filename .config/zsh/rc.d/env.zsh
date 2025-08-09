@@ -4,9 +4,10 @@ alias ll='ls -lhaG'
 # history
 export HISTTIMEFORMAT='%y-%m-%d  '
 export HISTCONTROL=ignoredups:erasedups
-export HISTIGNORE="history:uptime"
+export HISTFILE=$HOME/.zsh_history
 export HISTSIZE=50000
-setopt histappend
+export SAVEHIST=50000
+setopt appendhistory
 
 # theme
 export BAT_THEME="Catppuccin Mocha"
