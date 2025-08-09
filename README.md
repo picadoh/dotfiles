@@ -37,7 +37,7 @@ Set of .dotfiles for personal or professional use.
 * [Bat](https://github.com/sharkdp/bat) and [Catppuccin Bat](https://github.com/catppuccin/bat)
 * [Tmux](https://github.com/tmux/tmux) and [Tmux Plugin Manager](https://github.com/tmux-plugins/tpm)
 
-### Example setup
+### Example setup (MacOS)
 
 ```shell
 git clone https://github.com/picadoh/dotfiles.git ~/dotfiles
@@ -53,4 +53,17 @@ echo -e "source ~/.config/zsh/init.zsh" >> ~/.zshrc
 
 echo -e "[include]\n    path = ~/dotfiles/.gitconfig" >> ~/.gitconfig
 ```
+
+### Additional setup for Linux/Hyprland:
+
+```
+ln -s ~/dotfiles/.config/wofi ~/.config/wofi
+ln -s ~/dotfiles/.config/hypr ~/.config/hypr
+ln -s ~/dotfiles/.config/hyprpanel ~/.config/hyprpanel
+```
+
+Requires:
+- https://github.com/SimplyCEO/wofi
+- https://hyprpanel.com/
+- https://wiki.hypr.land/Hypr-Ecosystem/
 

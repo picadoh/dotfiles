@@ -1,0 +1,47 @@
+{
+  "bar.customModules.storage.paths": [
+    "/"
+  ],
+  "theme.font.size": "1.0rem",
+  "bar.customModules.netstat.dynamicIcon": false,
+  "bar.workspaces.show_icons": false,
+  "bar.workspaces.show_numbered": false,
+  "bar.network.label": false,
+  "theme.bar.buttons.network.enableBorder": false,
+  "bar.battery.hideLabelWhenFull": false,
+  "theme.bar.enableShadow": false,
+  "theme.bar.buttons.volume.enableBorder": false,
+  "theme.bar.buttons.bluetooth.enableBorder": false,
+  "theme.bar.buttons.battery.enableBorder": true,
+  "bar.bluetooth.label": false,
+  "bar.volume.label": false,
+  "bar.layouts": {
+    "*": {
+      "left": [
+        "dashboard",
+        "workspaces",
+        "windowtitle"
+      ],
+      "middle": [
+        "media"
+      ],
+      "right": [
+        "volume",
+        "network",
+        "bluetooth",
+        "battery",
+        "systray",
+        "clock",
+        "notifications"
+      ]
+    }
+  },
+  "menus.clock.weather.location": "Los Angeles",
+  "menus.clock.weather.enabled": false,
+  "menus.clock.weather.unit": "metric",
+  "menus.power.logout": "loginctl terminate-user \"\"",
+  "menus.power.lowBatteryNotification": true,
+  "menus.power.lowBatteryThreshold": 20,
+  "menus.power.confirmation": false,
+  "menus.dashboard.powermenu.logout": "loginctl terminate-user \"\""
+}

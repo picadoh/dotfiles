@@ -9,14 +9,19 @@ fi
 [[ ! -d $HOME/powerlevel10k ]] || source ~/powerlevel10k/powerlevel10k.zsh-theme
 [[ ! -f $HOME/.p10k.zsh ]] || source ~/.p10k.zsh
 
-# syntax highlighting
-source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-(( ${+ZSH_HIGHLIGHT_STYLES} )) || typeset -A ZSH_HIGHLIGHT_STYLES
+# syntax highlighting and suggestions
+if command -v brew > /dev/null; then
+  source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+  source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+else
+  ZSH_HIGHLIGHT_LINUX=/usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+  [[ ! -f $ZSH_HIGHLIGHT_LINUX ]] || source $ZSH_HIGHLIGHT_LINUX
+  ZSH_AUTOSUGGESTIONS_LINUX=/usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+  [[ ! -f $ZSH_AUTOSUGGESTIONS_LINUX ]] || source $ZSH_AUTOSUGGESTIONS_LINUX
+fi
+
 ZSH_HIGHLIGHT_STYLES[path]=none
 ZSH_HIGHLIGHT_STYLES[path_prefix]=none
-
-# auto suggestions
-source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # zoxide
 if command -v zoxide > /dev/null; then
@@ -26,6 +31,7 @@ fi
 
 # asdf
 if command -v asdf > /dev/null; then
+  export PATH="$HOME/.asdf/shims:$PATH"
   export PATH="$HOME/.asdf/bin:$PATH"
 fi
 
