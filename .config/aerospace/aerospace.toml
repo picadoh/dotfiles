@@ -1,0 +1,71 @@
+after-startup-command = [
+    # https://github.com/FelixKratz/JankyBorders
+    'exec-and-forget borders active_color=0xee33ccff inactive_color=0xaa595959 width=5'
+]
+
+start-at-login = true
+
+# See: https://nikitabobko.github.io/AeroSpace/guide#normalization
+enable-normalization-flatten-containers = false
+enable-normalization-opposite-orientation-for-nested-containers = false
+
+default-root-container-layout = 'tiles'
+
+default-root-container-orientation = 'auto'
+
+on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
+
+automatically-unhide-macos-hidden-apps = false
+
+[gaps]
+    inner.horizontal = 10
+    inner.vertical =   10
+    outer.left =       10
+    outer.bottom =     10
+    outer.top =        10
+    outer.right =      10
+
+[mode.main.binding]
+ 
+    # See: https://nikitabobko.github.io/AeroSpace/commands#exec-and-forget
+    cmd-enter = 'exec-and-forget osascript $HOME/.config/aerospace/wezterm.applescript'
+
+    # See: https://nikitabobko.github.io/AeroSpace/commands#fullscreen
+    alt-shift-space = 'fullscreen'
+
+    # See: https://nikitabobko.github.io/AeroSpace/commands#focus
+    alt-h = 'focus left'
+    alt-j = 'focus down'
+    alt-k = 'focus up'
+    alt-l = 'focus right'
+
+    # See: https://nikitabobko.github.io/AeroSpace/commands#move
+    cmd-h = 'move left'
+    cmd-j = 'move down'
+    cmd-k = 'move up'
+    cmd-l = 'move right'
+
+    # See: https://nikitabobko.github.io/AeroSpace/commands#resize
+    cmd-alt-left = 'resize width -25'
+    cmd-alt-down = 'resize height -25'
+    cmd-alt-up = 'resize height +25'
+    cmd-alt-right = 'resize width +25'
+
+    # See: https://nikitabobko.github.io/AeroSpace/commands#workspace
+    cmd-1 = 'workspace 1'
+    cmd-2 = 'workspace 2'
+    cmd-3 = 'workspace 3'
+    cmd-4 = 'workspace 4'
+
+    # See: https://nikitabobko.github.io/AeroSpace/commands#move-node-to-workspace
+    cmd-shift-1 = 'move-node-to-workspace 1'
+    cmd-shift-2 = 'move-node-to-workspace 2'
+    cmd-shift-3 = 'move-node-to-workspace 3'
+    cmd-shift-4 = 'move-node-to-workspace 4'
+
+    # See: https://nikitabobko.github.io/AeroSpace/commands#join-with
+    cmd-shift-h = ['join-with left', 'mode main']
+    cmd-shift-j = ['join-with down', 'mode main']
+    cmd-shift-k = ['join-with up', 'mode main']
+    cmd-shift-l = ['join-with right', 'mode main']
+

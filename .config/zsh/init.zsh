@@ -31,7 +31,7 @@ fi
 
 # asdf
 if command -v asdf > /dev/null; then
-  export PATH="$HOME/.asdf/shims:$PATH"
+  source $HOME/.asdf/asdf.sh
   export PATH="$HOME/.asdf/bin:$PATH"
 fi
 

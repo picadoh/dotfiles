@@ -37,6 +37,19 @@ Set of .dotfiles for personal or professional use.
 * [Bat](https://github.com/sharkdp/bat) and [Catppuccin Bat](https://github.com/catppuccin/bat)
 * [Tmux](https://github.com/tmux/tmux) and [Tmux Plugin Manager](https://github.com/tmux-plugins/tpm)
 
+#### Tiling Window Managers
+
+* [Aerospace](https://github.com/nikitabobko/AeroSpace) (MacOS)
+* [Hyprland](https://hyprland.org/) (Linux)
+
+#### Status bar (Linux only)
+
+* [Hyprpanel](https://hyprpanel.com/)
+
+#### Launcher (Linux only)
+
+* [Wofi](https://github.com/SimplyCEO/wofi)
+
 ### Example setup (MacOS)
 
 ```shell
@@ -54,7 +67,13 @@ echo -e "source ~/.config/zsh/init.zsh" >> ~/.zshrc
 echo -e "[include]\n    path = ~/dotfiles/.gitconfig" >> ~/.gitconfig
 ```
 
-### Additional setup for Linux/Hyprland:
+### Additional setup for MacOS only:
+
+```
+ln -s ~/dotfiles/.config/aerospace ~/.config/aerospace
+```
+
+### Additional setup for Linux only:
 
 ```
 ln -s ~/dotfiles/.config/wofi ~/.config/wofi
