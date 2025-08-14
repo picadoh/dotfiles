@@ -48,7 +48,7 @@ Set of .dotfiles for personal or professional use.
 
 #### Launcher (Linux only)
 
-* [Wofi](https://github.com/SimplyCEO/wofi)
+* [Walker](https://github.com/abenz1267/walker)
 
 ### Example setup (MacOS)
 
@@ -76,7 +76,6 @@ ln -s ~/dotfiles/.config/aerospace ~/.config/aerospace
 ### Additional setup for Linux only:
 
 ```
-ln -s ~/dotfiles/.config/wofi ~/.config/wofi
 ln -s ~/dotfiles/.config/hypr ~/.config/hypr
 ln -s ~/dotfiles/.config/hyprpanel ~/.config/hyprpanel
 ```
