@@ -53,3 +53,68 @@ zstyle ':completion:*' matcher-list '' 'm:{[:lower:][:upper:]}={[:upper:][:lower
 # path
 export PATH="/usr/local/sbin:$PATH"
 
+
+###########
+# env var #
+###########
+
+# general
+alias ll='ls -lhaG'
+
+# history
+export HISTTIMEFORMAT='%y-%m-%d  '
+export HISTCONTROL=ignoredups:erasedups
+export HISTFILE=$HOME/.zsh_history
+export HISTSIZE=50000
+export SAVEHIST=50000
+setopt appendhistory
+
+# theme
+export BAT_THEME="Catppuccin Mocha"
+
+# keys
+bindkey "^[[A" history-search-backward
+bindkey "^[[B" history-search-forward
+
+# editor
+export EDITOR='nvim'
+
+# fzf
+source <(fzf --zsh)
+FZF_DEFAULT_COMMAND='ag -g ""'
+
+# gpg
+export GPG_TTY="$(tty)"
+
+
+###########
+# aliases #
+###########
+
+# editor
+alias vim='nvim'
+alias vi='nvim'
+
+# interactive search / open nvim 
+alias fim='nvim $(fzf -m --preview="bat --color=always {}")'
+
+# k8s
+alias k='kubectl'
+
+# docker
+alias docker-compose='docker compose'
+alias dtree="docker run -it --rm -v /var/run/docker.sock:/var/run/docker.sock nate/dockviz images -t"
+alias dins='docker inspect -f'
+
+# localstack
+alias awslocal='aws --endpoint-url http://localhost:4566'
+
+# misc
+alias wget='wget -c'
+alias so='source ~/.zshrc'
+
+# delta
+if command -v delta > /dev/null; then
+  alias diff='delta'
+fi
+
