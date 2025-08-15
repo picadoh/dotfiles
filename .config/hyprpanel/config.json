@@ -46,5 +46,6 @@
   "menus.dashboard.shortcuts.enabled": false,
   "menus.dashboard.stats.enable_gpu": false,
   "theme.bar.menus.menu.notifications.pager.show": true,
-  "menus.dashboard.directories.enabled": false
+  "menus.dashboard.directories.enabled": false,
+  "theme.font.weight": 400
 }
