@@ -1,6 +1,6 @@
 after-startup-command = [
     # https://github.com/FelixKratz/JankyBorders
-    'exec-and-forget /usr/local/bin/borders active_color=0xee33ccff inactive_color=0xaa595959 width=5.0',
+    'exec-and-forget /usr/local/bin/borders "active_color=gradient(top_left=0xee33ccff,bottom_right=0xee00ff99)" inactive_color=0xaa595959 width=6.5',
     'exec-and-forget aerospace layout tiles'
 ]
 
