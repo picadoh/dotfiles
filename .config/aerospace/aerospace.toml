@@ -29,7 +29,7 @@ automatically-unhide-macos-hidden-apps = false
 [mode.main.binding]
  
     # See: https://nikitabobko.github.io/AeroSpace/commands#exec-and-forget
-    cmd-enter = 'exec-and-forget osascript $HOME/.config/aerospace/wezterm.applescript'
+    cmd-shift-enter = 'exec-and-forget osascript $HOME/.config/aerospace/wezterm.applescript'
 
     # See: https://nikitabobko.github.io/AeroSpace/commands#fullscreen
     alt-shift-space = 'fullscreen'
