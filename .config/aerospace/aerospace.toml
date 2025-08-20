@@ -1,6 +1,6 @@
 after-startup-command = [
     # https://github.com/FelixKratz/JankyBorders
-    'exec-and-forget /usr/local/bin/borders "active_color=gradient(top_left=0xee33ccff,bottom_right=0xee00ff99)" inactive_color=0xaa595959 width=6.5',
+    'exec-and-forget borders "active_color=gradient(top_left=0xee33ccff,bottom_right=0xee00ff99)" inactive_color=0xaa595959 width=6.5',
     'exec-and-forget aerospace layout tiles'
 ]
 
@@ -32,7 +32,7 @@ automatically-unhide-macos-hidden-apps = false
     cmd-shift-enter = 'exec-and-forget osascript $HOME/.config/aerospace/wezterm.applescript'
 
     # See: https://nikitabobko.github.io/AeroSpace/commands#fullscreen
-    alt-shift-space = 'fullscreen'
+    cmd-shift-space = 'fullscreen'
 
     # See: https://nikitabobko.github.io/AeroSpace/commands#focus
     alt-h = 'focus left'
@@ -70,3 +70,5 @@ automatically-unhide-macos-hidden-apps = false
     cmd-shift-k = ['join-with up', 'mode main']
     cmd-shift-l = ['join-with right', 'mode main']
 
+[exec.env-vars]
+PATH = '/usr/local/bin/:${PATH}'
