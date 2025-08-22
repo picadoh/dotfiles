@@ -4,7 +4,7 @@ after-startup-command = [
     'exec-and-forget aerospace layout tiles'
 ]
 
-start-at-login = true
+start-at-login = false
 
 # See: https://nikitabobko.github.io/AeroSpace/guide#normalization
 enable-normalization-flatten-containers = false
@@ -47,22 +47,20 @@ automatically-unhide-macos-hidden-apps = false
     alt-shift-l = 'move right'
 
     # See: https://nikitabobko.github.io/AeroSpace/commands#resize
-    cmd-alt-left = 'resize width -25'
-    cmd-alt-down = 'resize height -25'
-    cmd-alt-up = 'resize height +25'
-    cmd-alt-right = 'resize width +25'
+    cmd-shift-up = 'resize smart +25'
+    cmd-shift-down = 'resize smart -25'
 
     # See: https://nikitabobko.github.io/AeroSpace/commands#workspace
-    cmd-1 = 'workspace 1'
-    cmd-2 = 'workspace 2'
-    cmd-3 = 'workspace 3'
-    cmd-4 = 'workspace 4'
+    cmd-alt-1 = 'workspace 1'
+    cmd-alt-2 = 'workspace 2'
+    cmd-alt-3 = 'workspace 3'
+    cmd-alt-4 = 'workspace 4'
 
     # See: https://nikitabobko.github.io/AeroSpace/commands#move-node-to-workspace
-    cmd-alt-1 = 'move-node-to-workspace 1'
-    cmd-alt-2 = 'move-node-to-workspace 2'
-    cmd-alt-3 = 'move-node-to-workspace 3'
-    cmd-alt-4 = 'move-node-to-workspace 4'
+    cmd-shift-1 = 'move-node-to-workspace 1'
+    cmd-shift-2 = 'move-node-to-workspace 2'
+    cmd-shift-3 = 'move-node-to-workspace 3'
+    cmd-shift-4 = 'move-node-to-workspace 4'
 
     # See: https://nikitabobko.github.io/AeroSpace/commands#join-with
     cmd-shift-h = ['join-with left', 'mode main']
@@ -71,4 +69,4 @@ automatically-unhide-macos-hidden-apps = false
     cmd-shift-l = ['join-with right', 'mode main']
 
 [exec.env-vars]
-PATH = '/usr/local/bin/:${PATH}'
+PATH = '/usr/local/bin/:/opt/homebrew/bin:${PATH}'

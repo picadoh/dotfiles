@@ -112,6 +112,7 @@ alias awslocal='aws --endpoint-url http://localhost:4566'
 # misc
 alias wget='wget -c'
 alias so='source ~/.zshrc'
+alias ag='ag --hidden'
 
 # delta
 if command -v delta > /dev/null; then

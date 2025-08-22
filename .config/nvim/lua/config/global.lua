@@ -8,6 +8,8 @@ vim.o.autoread = true
 vim.o.autowrite = true
 vim.o.mouse = ''
 
+vim.o.winborder = "rounded"
+
 vim.api.nvim_create_autocmd({ "BufEnter" }, {
     callback = function()
         vim.opt_local.formatoptions:remove({ "c", "r", "o" })
