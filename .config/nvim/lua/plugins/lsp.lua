@@ -24,9 +24,6 @@ end
 return {
     {
         "nvim-java/nvim-java",
-        config = function()
-            require("java").setup({})
-        end
     },
 
     {
@@ -91,6 +88,7 @@ return {
                 capabilities = require("blink.cmp").get_lsp_capabilities(),
             })
 
+            require('java').setup()
             require("lspconfig").jdtls.setup({})
 
             require("mason-lspconfig").setup({
