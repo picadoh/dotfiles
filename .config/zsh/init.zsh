@@ -75,6 +75,10 @@ export BAT_THEME="Catppuccin Mocha"
 # keys
 bindkey "^[[A" history-search-backward
 bindkey "^[[B" history-search-forward
+bindkey "^A" beginning-of-line
+bindkey "^E" end-of-line
+bindkey "^[[1;3C" forward-word
+bindkey "^[[1;3D" backward-word
 
 # editor
 export EDITOR='nvim'
