@@ -23,6 +23,13 @@ end
 
 return {
     {
+        "nvim-java/nvim-java",
+        config = function()
+            require("java").setup({})
+        end
+    },
+
+    {
         "VonHeikemen/lsp-zero.nvim",
         branch = "v4.x",
         lazy = true,
@@ -40,6 +47,9 @@ return {
         cmd = { "LspInfo", "LspInstall", "LspStart" },
         event = { "BufReadPre", "BufNewFile" },
         dependencies = {
+            {
+                "nvim-java/nvim-java",
+            },
             {
                 "saghen/blink.cmp",
             },
@@ -80,6 +90,8 @@ return {
                 lsp_attach = lsp_attach,
                 capabilities = require("blink.cmp").get_lsp_capabilities(),
             })
+
+            require("lspconfig").jdtls.setup({})
 
             require("mason-lspconfig").setup({
                 ensure_installed = lsp_servers(),
