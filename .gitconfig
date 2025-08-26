@@ -15,10 +15,14 @@
     conflictStyle = diff3
 
 [diff]
+    tool = nvimdiff
     colorMoved = default
 
 [difftool]
-  prompt = false
+    prompt = false
+
+[difftool "nvimdiff"]
+	cmd = nvim -d "$LOCAL" "$REMOTE"
 
 [push]
 	default = current
@@ -40,21 +44,22 @@
     interactive = auto
 
 [alias]
-  b = branch
-  st = status -sb
-  ci = commit
-  co = checkout
-  up = checkout
-  d  = difftool
-  dp = diff --patience
-  dc = diff --cached
-  dcp = diff --cached --patience
-  gl = log --graph --decorate --pretty=oneline --abbrev-commit --all
-  hist = log --graph --decorate --pretty=format:'%h %Cred %ad %Cgreen %s%d %Cblue %an' --date=short --abbrev-commit --all
-  info = config --get remote.origin.url
-  unadd = reset HEAD
-  uncommit = reset --soft HEAD~
-  nuclear = !git fetch origin && git reset --hard origin/master
+    b = branch
+    st = status -sb
+    ci = commit
+    co = checkout
+    up = checkout
+    d  = diff
+    dt = difftool
+    dp = diff --patience
+    dc = diff --cached
+    dcp = diff --cached --patience
+    gl = log --graph --decorate --pretty=oneline --abbrev-commit --all
+    hist = log --graph --decorate --pretty=format:'%h %Cred %ad %Cgreen %s%d %Cblue %an' --date=short --abbrev-commit --all
+    info = config --get remote.origin.url
+    unadd = reset HEAD
+    uncommit = reset --soft HEAD~
+    nuclear = !git fetch origin && git reset --hard origin/master
 
 [filter "lfs"]
 	clean = git-lfs clean %f
