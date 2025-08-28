@@ -26,6 +26,6 @@ envinclude KITTY_CONF_*
 
 
 # BEGIN_KITTY_THEME
-# Catppuccin-Mocha
+# Jet Brains Darcula
 include current-theme.conf
 # END_KITTY_THEME
