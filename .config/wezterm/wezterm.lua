@@ -43,6 +43,9 @@ local config = {
         { key = "RightArrow", mods = "OPT",         action = act { SendString = "\x1bf" } },
         { key = 'k',          mods = 'SUPER',       action = act.ClearScrollback 'ScrollbackAndViewport' },
         { key = 'k',          mods = 'SUPER|SHIFT', action = act.ClearScrollback 'ScrollbackAndViewport' },
+        { key = 'w',          mods = 'SUPER',       action = act.CloseCurrentPane { confirm = false } },
+        { key = 'd',          mods = 'SUPER',       action = act.SplitHorizontal { domain = 'CurrentPaneDomain' } },
+        { key = 'd',          mods = 'SUPER|SHIFT', action = act.SplitVertical { domain = 'CurrentPaneDomain' } },
     },
 }
 
