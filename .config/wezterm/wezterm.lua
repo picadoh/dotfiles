@@ -19,7 +19,9 @@ local config = {
     automatically_reload_config = true,
     audible_bell = "Disabled",
     enable_tab_bar = true,
+    tab_bar_at_bottom = true,
     hide_tab_bar_if_only_one_tab = true,
+    use_fancy_tab_bar = false,
     window_close_confirmation = "NeverPrompt",
     window_decorations = "RESIZE",
     send_composed_key_when_left_alt_is_pressed = true,
@@ -30,19 +32,11 @@ local config = {
     --window_background_opacity = 0.90,
     --macos_window_background_blur = 20,
     scrollback_lines = 50000,
-    enable_scroll_bar = true,
+    enable_scroll_bar = false,
     initial_rows = 50,
     initial_cols = 150,
     window_frame = {
         font_size = font.size + 1,
-    },
-    colors = {
-        tab_bar = {
-            active_tab = {
-                bg_color = theme.colors.background,
-                fg_color = theme.colors.foreground,
-            },
-        },
     },
     keys = {
         { key = "LeftArrow",  mods = "OPT",         action = act { SendString = "\x1bb" } },
