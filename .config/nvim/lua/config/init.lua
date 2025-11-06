@@ -1,5 +1,5 @@
 require("config.global")
-require("config.lazy")
+require("config.autocmds")
 require("config.opt")
 require("config.keymap")
 require("config.boss")
