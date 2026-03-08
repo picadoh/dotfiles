@@ -1,4 +1,4 @@
-#theme = Catppuccin Frappe
+theme = Catppuccin Frappe
 #theme = Catppuccin Mocha
 
 font-family = Hack Nerd Font Mono
@@ -6,13 +6,16 @@ font-size = 13.0
 
 cursor-style = block
 cursor-style-blink = false
+
 shell-integration-features = no-cursor
 
 window-height = 50
 window-width = 150
 window-save-state = always
-quit-after-last-window-closed=true
-confirm-close-surface = false
 
-keybind = cmd+w=text:\x13x
+macos-titlebar-style = hidden
+
+quit-after-last-window-closed=true
+
+confirm-close-surface = false
 

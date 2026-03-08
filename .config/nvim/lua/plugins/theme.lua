@@ -1,20 +1,11 @@
 return {
-    --{
-    --    "catppuccin/nvim",
-    --    priority = 1000,
-    --    config = function()
-    --        vim.cmd([[colorscheme catppuccin]])
-    --        vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
-    --        vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
-    --    end,
-    --},
     {
-        "nkxxll/ghostty-default-style-dark.nvim",
-        lazy = false,
+        "catppuccin/nvim",
         priority = 1000,
         config = function()
-            require("ghostty-default-style-dark").setup({})
-            vim.cmd.colorscheme("ghostty-default-style-dark")
-        end
+            vim.cmd([[colorscheme catppuccin-frappe]])
+            vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
+            vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
+        end,
     }
 }

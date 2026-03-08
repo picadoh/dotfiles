@@ -1,7 +1,7 @@
 local wezterm = require("wezterm")
 local act = wezterm.action
 
-local theme_name = "catppuccin-mocha"
+local theme_name = "catppuccin-frappe"
 
 local theme = {
     name = theme_name,
@@ -11,7 +11,7 @@ local theme = {
 local font = {
     name = "Hack Nerd Font Mono",
     weight = "Regular",
-    size = 12.5,
+    size = 13,
 }
 
 local config = {

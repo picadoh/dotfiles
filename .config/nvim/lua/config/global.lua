@@ -6,7 +6,7 @@ vim.g.loaded_python_provider = 0
 
 vim.o.autoread = true
 vim.o.autowrite = true
-vim.o.mouse = ''
+vim.o.mouse = 'a'
 
 vim.o.winborder = "rounded"
 
