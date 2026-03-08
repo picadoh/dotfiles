@@ -24,9 +24,11 @@ ZSH_HIGHLIGHT_STYLES[path]=none
 ZSH_HIGHLIGHT_STYLES[path_prefix]=none
 
 # zoxide
-if command -v zoxide > /dev/null; then
-  eval "$(zoxide init zsh)"
-  alias cd=z
+if [[ -z "$CLAUDE_CODE" ]]; then
+  if command -v zoxide > /dev/null; then
+    eval "$(zoxide init zsh)"
+    alias cd=z
+  fi
 fi
 
 # asdf

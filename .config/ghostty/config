@@ -1,7 +1,8 @@
-theme = catppuccin-mocha
+#theme = Catppuccin Frappe
+#theme = Catppuccin Mocha
 
 font-family = Hack Nerd Font Mono
-font-size = 11.0
+font-size = 13.0
 
 cursor-style = block
 cursor-style-blink = false
