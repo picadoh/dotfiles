@@ -9,24 +9,34 @@ fi
 [[ ! -d $HOME/powerlevel10k ]] || source ~/powerlevel10k/powerlevel10k.zsh-theme
 [[ ! -f $HOME/.p10k.zsh ]] || source ~/.p10k.zsh
 
+
+# Optimization: Ensure path variables only contain unique values
+typeset -U path PATH fpath FPATH
+
+# Optimization: Hardcoded Homebrew path
+BREW_PREFIX="/usr/local"
+
+# Homebrew environment variables
+export HOMEBREW_NO_INSTALL_CLEANUP=1
+export HOMEBREW_NO_ENV_HINTS=1
+
 # syntax highlighting and suggestions
-if command -v brew > /dev/null; then
-  source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-  source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-else
-  ZSH_HIGHLIGHT_LINUX=/usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-  [[ ! -f $ZSH_HIGHLIGHT_LINUX ]] || source $ZSH_HIGHLIGHT_LINUX
-  ZSH_AUTOSUGGESTIONS_LINUX=/usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-  [[ ! -f $ZSH_AUTOSUGGESTIONS_LINUX ]] || source $ZSH_AUTOSUGGESTIONS_LINUX
+if [[ -d "$BREW_PREFIX" ]]; then
+  source "$BREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
+  source "$BREW_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh"
 fi
 
 ZSH_HIGHLIGHT_STYLES[path]=none
 ZSH_HIGHLIGHT_STYLES[path_prefix]=none
 
-# zoxide
+# zoxide initialization with caching
 if [[ -z "$CLAUDE_CODE" ]]; then
   if command -v zoxide > /dev/null; then
-    eval "$(zoxide init zsh)"
+    ZOXIDE_CACHE="${XDG_CACHE_HOME:-$HOME/.cache}/zoxide-init.zsh"
+    if [[ ! -f "$ZOXIDE_CACHE" ]]; then
+      zoxide init zsh > "$ZOXIDE_CACHE"
+    fi
+    source "$ZOXIDE_CACHE"
     alias cd=z
   fi
 fi
@@ -44,9 +54,13 @@ fi
 # rc.d files
 for f in ~/.config/zsh/rc.d/*.zsh(.N); do source "$f"; done
 
-# compinit
+# Optimization: Faster compinit
 autoload -Uz compinit
-compinit
+if [[ -n ${ZDOTDIR:-$HOME}/.zcompdump(#qN.m-1) ]]; then
+  compinit -C
+else
+  compinit
+fi
 
 # zstyle
 zstyle ':completion:*' completer _complete
@@ -85,8 +99,14 @@ bindkey "^[[1;3D" backward-word
 # editor
 export EDITOR='nvim'
 
-# fzf
-source <(fzf --zsh)
+# fzf initialization with caching
+if command -v fzf > /dev/null; then
+  FZF_CACHE="${XDG_CACHE_HOME:-$HOME/.cache}/fzf-init.zsh"
+  if [[ ! -f "$FZF_CACHE" ]]; then
+    fzf --zsh > "$FZF_CACHE"
+  fi
+  source "$FZF_CACHE"
+fi
 FZF_DEFAULT_COMMAND='ag -g ""'
 
 # gpg
@@ -125,3 +145,12 @@ if command -v delta > /dev/null; then
   alias diff='delta'
 fi
 
+# Performance Optimization: Auto-compile configuration files
+() {
+  local f
+  for f in "$HOME/.zshrc" "$HOME/.config/zsh/init.zsh"; do
+    if [[ "$f" -nt "$f.zwc" ]]; then
+      zcompile "$f"
+    fi
+  done
+}
