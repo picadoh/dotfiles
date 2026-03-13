@@ -1,7 +1,7 @@
 local wezterm = require("wezterm")
 local act = wezterm.action
 
-local theme_name = "catppuccin-frappe"
+local theme_name = "catppuccin-mocha"
 
 local theme = {
     name = theme_name,
