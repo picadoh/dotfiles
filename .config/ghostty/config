@@ -10,9 +10,11 @@ shell-integration-features = no-cursor
 
 window-height = 50
 window-width = 150
+window-padding-x = 10
+window-padding-y = 10
 window-save-state = always
 
-macos-titlebar-style = tabs
+macos-titlebar-style = hidden
 
 quit-after-last-window-closed=true
 
