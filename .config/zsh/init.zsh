@@ -14,20 +14,27 @@ fi
 typeset -U path PATH fpath FPATH
 
 # Optimization: Hardcoded Homebrew path
-BREW_PREFIX="/usr/local"
+if [[ -d "/opt/homebrew" ]]; then
+  BREW_PREFIX="/opt/homebrew"
+else
+  BREW_PREFIX="/usr/local"
+fi
 
 # Homebrew environment variables
 export HOMEBREW_NO_INSTALL_CLEANUP=1
 export HOMEBREW_NO_ENV_HINTS=1
 
 # syntax highlighting and suggestions
-if [[ -d "$BREW_PREFIX" ]]; then
+if [[ -f "$BREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" ]]; then
   source "$BREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
+  ZSH_HIGHLIGHT_STYLES[path]=none
+  ZSH_HIGHLIGHT_STYLES[path_prefix]=none
+fi
+
+if [[ -f "$BREW_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh" ]]; then
   source "$BREW_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh"
 fi
 
-ZSH_HIGHLIGHT_STYLES[path]=none
-ZSH_HIGHLIGHT_STYLES[path_prefix]=none
 
 # zoxide initialization with caching
 if [[ -z "$CLAUDE_CODE" ]]; then
