@@ -14,7 +14,7 @@ window-padding-x = 10
 window-padding-y = 10
 window-save-state = always
 
-macos-titlebar-style = hidden
+macos-titlebar-style = tabs
 
 quit-after-last-window-closed=true
 
