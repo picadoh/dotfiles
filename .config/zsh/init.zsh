@@ -162,9 +162,3 @@ fi
   done
 }
 
-# Reset kitty keyboard protocol (fixes garbled keys after Claude Code exits)
-claude() {
-  command claude "$@"
-  printf '\e[>0u' 2>/dev/null
-}
-
